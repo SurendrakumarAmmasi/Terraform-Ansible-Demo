@@ -1,0 +1,14 @@
+---
+- name: Provision and manage Azure VMs
+  hosts: all
+  become: true
+  tasks:
+    - name: Install Nginx
+      apt:
+        name: nginx
+        state: latest
+
+    - name: Start Nginx service
+      service:
+        name: nginx
+        state: started

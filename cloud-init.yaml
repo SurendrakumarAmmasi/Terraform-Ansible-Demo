@@ -1,0 +1,17 @@
+#cloud-config
+
+# Task 1: Update package repository cache
+runcmd1:
+  - ["sudo", "apt", "update"]
+
+# Task 2: Add Ansible repository
+runcmd2:
+  - ["sudo", "add-apt-repository", "--yes", "--update", "ppa:ansible/ansible"]
+
+# Task 3: Install all required packages
+packages:
+  - ansible
+  - python3
+  - python3-pip
+  - software-properties-common
+
