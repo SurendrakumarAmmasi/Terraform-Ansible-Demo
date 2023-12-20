@@ -6,7 +6,7 @@ variable "vm_map" {
   default = {
     "vm1" = {
       name = "ansible-controller-vm"
-      size = "Standard_B1s"
+      size = "Standard_B2s"
     }
   }
 }
