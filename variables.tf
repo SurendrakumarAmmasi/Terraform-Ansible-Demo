@@ -8,5 +8,9 @@ variable "vm_map" {
       name = "ansible-controller-vm"
       size = "Standard_B2s"
     }
+    "vm2" = {
+      name = "ansible-client-vm"
+      size = "Standard_B2s"
+    }
   }
 }
