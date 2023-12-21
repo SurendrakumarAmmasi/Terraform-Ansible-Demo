@@ -9,7 +9,11 @@ variable "vm_map" {
       size = "Standard_B2s"
     }
     "vm2" = {
-      name = "ansible-client-vm"
+      name = "ansible-client-vm1"
+      size = "Standard_B2s"
+    }
+    "vm3" = {
+      name = "ansible-client-vm2"
       size = "Standard_B2s"
     }
   }
