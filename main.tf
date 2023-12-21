@@ -161,5 +161,16 @@ resource "azurerm_linux_virtual_machine" "tf-ans-demo-vm" {
   }
 }
 
+resource "null_resource" "run_python_script" {
+  depends_on = [azurerm_linux_virtual_machine.tf-ans-demo-vm]
+  
+  provisioner "local-exec" {
+    command = "python3 ${path.module}/inventory.py > ${path.module}/inventory.json"
+  }
+  triggers = {
+    always_run = "${timestamp()}"
+  }
+}
+
 
 
